@@ -216,8 +216,21 @@ a:hover {
 }
 
 .benefits {
+  position: relative;
   padding-top: 120px;
   padding-bottom: 120px;
+}
+.benefits::after {
+  content: "II";
+  position: absolute;
+  left: calc(50% + 555px);
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  line-height: 1.15;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: "Playfair Display", serif;
 }
 
 .benefits__row {
@@ -241,11 +254,27 @@ a:hover {
   line-height: 1.35;
 }
 
-.appartments__title {
+.apartments {
+  position: relative;
+}
+.apartments::before {
+  content: "III";
+  position: absolute;
+  right: calc(50% + 555px);
+  transform: translateX(50%);
+  position: absolute;
+  top: 0;
+  line-height: 1.15;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: "Playfair Display", serif;
+}
+
+.apartments__title {
   margin-bottom: 88px;
 }
 
-.appartments__cards {
+.apartments__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -383,6 +412,23 @@ a:hover {
   background-color: #e5ca6e;
 }
 
+.video {
+  position: relative;
+  text-align: center;
+}
+.video::after {
+  content: "IV";
+  position: absolute;
+  left: calc(50% + 555px);
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  line-height: 1.15;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: "Playfair Display", serif;
+}
+
 .video__link {
   position: relative;
   display: block;
@@ -396,7 +442,7 @@ a:hover {
   width: 100%;
   height: 100%;
   background: rgba(36, 43, 51, 0.8);
-  transition: background 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 .video__link:hover::before {
   background: rgba(36, 43, 51, 0.7);
@@ -417,6 +463,22 @@ a:hover {
 
 .section-map {
   padding: 180px 0;
+  position: relative;
+}
+.section-map::before {
+  content: "V";
+  z-index: -1;
+  position: absolute;
+  right: calc(50% + 555px);
+  transform: translateX(50%);
+  position: absolute;
+  top: 0;
+  line-height: 1.15;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: "Playfair Display", serif;
+  top: 180px;
+  line-height: 1;
 }
 
 .section-map__title {

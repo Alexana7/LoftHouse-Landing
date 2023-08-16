@@ -126,10 +126,6 @@ a:hover {
   white-space: nowrap;
 }
 
-.none {
-  display: none !important;
-}
-
 .title-2 {
   font-family: "Playfair Display", serif;
   font-size: 36px;
@@ -140,6 +136,10 @@ a:hover {
 .link-bold {
   font-weight: 700;
   color: #D4C17F;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 .header {
@@ -162,6 +162,36 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__top-row--mobile {
+  position: fixed;
+  z-index: 20;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #242B33;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.header__top-row--mobile .header__nav {
+  display: block;
+}
+.header__top-row--mobile .nav__list {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.header__top-row--mobile .nav-icon-btn {
+  position: fixed;
+  top: 40px;
+  right: 15px;
 }
 
 @media screen and (max-width: 999px) {

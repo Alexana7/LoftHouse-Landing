@@ -43,15 +43,18 @@ a {
   white-space: nowrap;
 }
 
-// .none {
-//   display: none !important;
-// }
+.none {
+  display: none !important;
+}
 
 .title-2 {
   font-family: $font-accent;
   font-size: 36px;
   font-weight: 700;
   color: $accent;
+  @include mediaTablet {
+    font-size: 28px;
+  }
 }
 
 .link-bold {

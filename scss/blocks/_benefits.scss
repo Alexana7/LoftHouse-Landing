@@ -1,7 +1,7 @@
 .benefits {
+  overflow: hidden;
   position: relative;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
 
   &::after {
     content:'II';
@@ -9,22 +9,37 @@
     left:calc(50% + 555px);
     transform: translateX(-50%);
     @include decorNumber;
+    @include mediaTablet {
+     display: none;
+    }  
   }
 }
 .benefits__row {
   display: flex;
-  gap: 70px;
+  column-gap: 70px;
   
+  @include mediaTablet {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px 30px;
+  }  
 }
 
 .benefits__item {
   text-align: center;
-  text-align: center;
+  max-width: 193px;
 
   &-image {
     width: 80px;
     height: 80px;
     margin-bottom: 53px;
+
+    @include mediaTablet {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 25px;
+    }
   }
 
   &-text {
@@ -32,6 +47,11 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 1.35;
+
+    @include mediaTablet {
+      font-size: 16px;
+      line-height: 1.2;
+    }
   }
 }
 

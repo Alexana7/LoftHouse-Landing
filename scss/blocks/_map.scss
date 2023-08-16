@@ -10,10 +10,21 @@
       @include decorNumber;
       top: 180px;
       line-height: 1;
+      @include mediaTablet {
+        display: none;
+      }
+    }
+
+    @include mediaTablet {
+      padding: 90px 0;
     }
   }
 .section-map__title {
   margin-bottom: 88px;
+
+  @include mediaTablet {
+    margin-bottom: 40px;
+  }
 }
 
 .section-map__content {

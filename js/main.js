@@ -7,3 +7,17 @@ navButton.onclick = function () {
   headerMenu.classList.toggle('header__top-row--mobile');
   document.body.classList.toggle('no-scroll');
 }
+
+/* Phone Mask */
+mask('[data-phone-input]');
+
+/* Return placeholder to the empty phone-input */
+
+const phoneInputs = document.querySelectorAll('[data-phone-input]');
+
+phoneInputs.forEach((input)=> {
+
+  input.addEventListener('blur', ()=> {
+    if(input.value == '+') input.value = '';
+  })
+});

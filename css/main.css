@@ -631,13 +631,12 @@ a:hover {
 }
 
 .video {
+  overflow: hidden;
   position: relative;
   text-align: center;
-  overflow: hidden;
 }
 .video::after {
   content: "IV";
-  position: absolute;
   left: calc(50% + 555px);
   transform: translateX(-50%);
   position: absolute;
@@ -655,7 +654,7 @@ a:hover {
 
 .video__link {
   position: relative;
-  display: block;
+  display: inline-block;
   text-align: center;
 }
 .video__link::before {

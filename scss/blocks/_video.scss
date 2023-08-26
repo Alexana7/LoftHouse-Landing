@@ -1,11 +1,10 @@
 .video {
+  overflow: hidden;
   position: relative;
   text-align: center;
-  overflow: hidden;
   
   &::after {
     content:'IV';
-    position: absolute;
     left:calc(50% + 555px);
     transform: translateX(-50%);
     @include decorNumber;
@@ -16,7 +15,7 @@
 }
 .video__link {
   position: relative;
-  display: block;
+  display: inline-block;
   text-align: center;
 
   &::before {
